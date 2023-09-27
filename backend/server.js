@@ -16,8 +16,8 @@ app.use(cors());
 app.use(express.json()); // body parser erlaubt uns auf Daten aus dem req.body zuzugreifen
 
 app.use("/tasks", taskRouter);
-app.use("/", express.static(path.join(__dirname, "../dist")));
-app.get("/*", (req, res) => res.sendFile(__dirname + "../dist/index.html"));
+app.use("/", express.static(path.join(__dirname, "/dist")));
+app.get("/*", (req, res) => res.sendFile(__dirname + "/dist/index.html"));
 
 app.use((req, res, next) => {
     res.status(404).send("Page not found!");
