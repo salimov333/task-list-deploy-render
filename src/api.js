@@ -1,4 +1,4 @@
-const URL = "https://task-list-backend-ud19.onrender.com"
+const URL = "https://task-list-backend-ud19.onrender.com/tasks"
 
 export const createTask = async (data) => {
     try {
